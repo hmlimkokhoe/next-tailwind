@@ -19,55 +19,10 @@ a {
   box-sizing: border-box;
 }
 
-.breadcrumb-container {
-  display: flex;
-  margin-bottom: 30px;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.breadcrumb-container li {
-  display: inline-block;
-  position: relative;
-  flex-basis: 16.67%;
-}
-
-.breadcrumb-container li p {
-  font-size: 15px;
-  text-align:center;
-}
-
-/*
- * Dots
- */
-.breadcrumb-container li:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  display: block;
-  border-radius: 3px;
-  margin: 0 auto 5px auto;
-  border-radius:20px;
-  background: #c4c4c4;
-}
-/*progressbar connectors*/
-.breadcrumb-container li:after {
-  content: '';
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  left: -50%;
-  top: 10px;
-  z-index:-1;
-  background: #c4c4c4;
-}
 .breadcrumb-container li:first-child:after {
-  /*connector not needed before the first step*/
   content: none;
 }
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
-.breadcrumb-container li.active:before,  .breadcrumb-container li.active:after{
-  background: #578A52;
+
+.breadcrumb-container li.active:before {
+  background: #EAAC0E;
 }
