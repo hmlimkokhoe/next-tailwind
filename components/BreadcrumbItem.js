@@ -8,8 +8,9 @@ function BreadcrumbItem (props) {
         return (props.isActive) ? "active" : '';
     }
 
-    const setDone = () => {
-        return (props.isDone) ? "before:bg-green" : '';
+    // use green, if done. otherwise, use gray
+    const setBackground = () => {
+        return (props.isDone) ? "before:bg-green" : 'before:bg-gray';
     }
 
     /*
@@ -38,10 +39,9 @@ function BreadcrumbItem (props) {
        }
      */
     return (
-        <li className={`${setActive()} ${setDone()} inline-block relative basis-2/12
-        before:content-[''] before:w-20 before:h-20 before:block before:rounded-[20px] before:bg-gray
+        <li className={`${setActive()}  ${setBackground()} inline-block relative basis-2/12
+        before:content-[''] before:w-20 before:h-20 before:block before:rounded-[20px] 
           before:mt-0 before:mr-auto before:mb-[5px] before:ml-auto
-          active:before:bg-red
         after:content-[''] after:w-[100%] after:h-[3px] after:absolute after:-left-2/4 after:top-[10px] after:-z-[1]
           after:bg-gray`
         }>
