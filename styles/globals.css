@@ -18,3 +18,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.breadcrumb-container li:first-child:after {
+  content: none;
+}
+
+.breadcrumb-container li.active:before {
+  background: #EAAC0E;
+}
